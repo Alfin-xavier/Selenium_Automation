@@ -32,7 +32,7 @@ public class LogInTest
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
 	
-	 @Test(priority = 2) 
+	 @Test
 	  public void logInTest() throws InterruptedException, IOException 
 	  {
 		 loginpage.clickOperation(properties.getProperty("login"));

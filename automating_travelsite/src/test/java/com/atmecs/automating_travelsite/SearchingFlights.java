@@ -32,7 +32,7 @@ public class SearchingFlights {
 		driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 	}
 
-	@Test(priority = 1)
+	@Test
 	public void twoWayTripSelectionTest() throws InterruptedException 
 	{
 		searchingflights.checkbox(properties.getProperty("roundtrip"));
@@ -56,7 +56,8 @@ public class SearchingFlights {
 	}
 
 	@AfterTest
-	public void closingDriver() {
+	public void closingDriver() 
+	{
 		driver.quit();
 	}
 }

@@ -25,5 +25,9 @@ public class ContactUsPage
 	{
 		driver.findElement(By.xpath(xpath)).sendKeys(value);
 	}
+	public void switchToAlert()
+	{
+		driver.switchTo().alert().accept();
+	}
 	
 }

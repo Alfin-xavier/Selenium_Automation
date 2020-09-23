@@ -5,6 +5,7 @@
     <classes>
       <class name="com.atemcs.demo_automation.RegistrationFormFilling">
         <methods>
+          <include name="settingAndLaunchingDriver"/>
           <include name="registerationTest"/>
         </methods>
       </class> <!-- com.atemcs.demo_automation.RegistrationFormFilling -->

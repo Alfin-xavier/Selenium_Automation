@@ -3,12 +3,8 @@ package com.atmecs.demo_blazesite;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -23,6 +19,7 @@ public class SignInTest
 	Properties properties;
 	SignInPage signinpage;
 	DataProviders dataproviders;
+	
 	@BeforeTest
 	public void settingAndLaunchingDriver() throws IOException 
 	{
@@ -37,7 +34,7 @@ public class SignInTest
 	}
 	
 
-	  @Test(priority = 1) 
+	  @Test
 	  public void signUpTest() throws InterruptedException, IOException
 	  {
 		  
@@ -49,14 +46,8 @@ public class SignInTest
 
 		  signinpage.clickOperation(properties.getProperty("button1"));
 		  
-		  //driver.findElement(By.xpath(properties.getProperty("button1"))).click();
+		  signinpage.waitAndClickAlert();
 			 
-		  Wait<WebDriver> wait = new WebDriverWait(driver,5);
-		  
-		  wait.until(ExpectedConditions.alertIsPresent()) ;
-		  
-		  driver.switchTo().alert().accept();
-		  
 	  }
 	  
 	  @AfterTest 

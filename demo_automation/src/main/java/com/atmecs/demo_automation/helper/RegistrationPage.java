@@ -2,7 +2,6 @@ package com.atmecs.demo_automation.helper;
 
 import java.util.Properties;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -43,5 +42,13 @@ public class RegistrationPage
 	{
 		driver.findElement(By.xpath(xpath)).click();
 	}
+	public void clickingCountry(String xpath)
+	{
+		for(int i=1;i<=4;i++)
+			driver.findElement(By.xpath(xpath)).click();
+			
+	}
+
+	
 	
 }

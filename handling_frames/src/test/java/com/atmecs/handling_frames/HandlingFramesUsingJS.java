@@ -9,10 +9,12 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
+import com.atmecs.handling_frames.constant.Constants;
 import com.atmecs.handling_frames.dataprovider.DataLoaders;
 import com.atmecs.handling_frames.helper.HelperClass;
 
-public class HandlingFramesUsingJS {
+public class HandlingFramesUsingJS 
+{
 	WebDriver driver;
 	JavascriptExecutor js;
 	Properties properties;
@@ -23,7 +25,7 @@ public class HandlingFramesUsingJS {
 	public void settingAndLaunchingDriver() throws InterruptedException, IOException 
 	{
 
-		System.setProperty("webdriver.chrome.driver", "\\drivers\\chromedriver.exe");
+		System.setProperty(Constants.USER_DIR , Constants.CHROME_PATH);
 		driver = new ChromeDriver();
 		helperclass = new HelperClass(driver);
 		dataprovider = new DataLoaders(driver);
@@ -39,14 +41,8 @@ public class HandlingFramesUsingJS {
 	{
 		helperclass.switchToFrame(properties.getProperty("frame"));
 		
-		js = (JavascriptExecutor) driver;
-
-		js.executeScript("window.scrollBy(0,1000)");
+		helperclass.jsMethods(properties.getProperty("chaticon"));
 		
-		WebElement chaticon = driver.findElement(By.xpath(properties.getProperty("chaticon")));
-		
-		js.executeScript("arguments[0].click();", chaticon);
-
 		helperclass.textDatas(properties.getProperty("username"), properties.getProperty("name"));
 
 		helperclass.textDatas(properties.getProperty("mob"), properties.getProperty("number"));
@@ -62,7 +58,8 @@ public class HandlingFramesUsingJS {
 	}
 	
 	@AfterTest
-	public void closingDriver() {
+	public void closingDriver() 
+	{
 		driver.close();
 	}
 }

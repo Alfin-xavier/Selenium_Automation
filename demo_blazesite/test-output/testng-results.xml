@@ -2,62 +2,62 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-23T11:42:11 IST" name="Suite" finished-at="2020-09-23T11:43:35 IST" duration-ms="83353">
+  <suite started-at="2020-09-23T14:41:16 IST" name="Suite" finished-at="2020-09-23T14:42:01 IST" duration-ms="44564">
     <groups>
     </groups>
-    <test started-at="2020-09-23T11:42:11 IST" name="Test" finished-at="2020-09-23T11:43:35 IST" duration-ms="83353">
+    <test started-at="2020-09-23T14:41:16 IST" name="Test" finished-at="2020-09-23T14:42:01 IST" duration-ms="44564">
       <class name="com.atmecs.demo_blazesite.LogInTest">
-        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atmecs.demo_blazesite.LogInTest@6b26e945]" started-at="2020-09-23T11:42:51 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T11:43:04 IST" duration-ms="13173" status="PASS">
+        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atmecs.demo_blazesite.LogInTest@18ce0030]" started-at="2020-09-23T14:41:33 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T14:41:41 IST" duration-ms="7748" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- settingAndLaunchingDriver -->
-        <test-method signature="logInTest()[pri:2, instance:com.atmecs.demo_blazesite.LogInTest@6b26e945]" started-at="2020-09-23T11:43:24 IST" name="logInTest" finished-at="2020-09-23T11:43:24 IST" duration-ms="529" status="PASS">
+        <test-method signature="logInTest()[pri:0, instance:com.atmecs.demo_blazesite.LogInTest@18ce0030]" started-at="2020-09-23T14:41:54 IST" name="logInTest" finished-at="2020-09-23T14:41:55 IST" duration-ms="415" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInTest -->
-        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atmecs.demo_blazesite.LogInTest@6b26e945]" started-at="2020-09-23T11:43:26 IST" name="closingDriver" finished-at="2020-09-23T11:43:30 IST" duration-ms="4331" status="PASS">
+        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atmecs.demo_blazesite.LogInTest@18ce0030]" started-at="2020-09-23T14:41:56 IST" name="closingDriver" finished-at="2020-09-23T14:41:56 IST" duration-ms="411" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingDriver -->
       </class> <!-- com.atmecs.demo_blazesite.LogInTest -->
-      <class name="com.atmecs.demo_blazesite.SignInTest">
-        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atmecs.demo_blazesite.SignInTest@4df50bcc]" started-at="2020-09-23T11:43:04 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T11:43:14 IST" duration-ms="9958" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- settingAndLaunchingDriver -->
-        <test-method signature="signUpTest()[pri:1, instance:com.atmecs.demo_blazesite.SignInTest@4df50bcc]" started-at="2020-09-23T11:43:22 IST" name="signUpTest" finished-at="2020-09-23T11:43:24 IST" duration-ms="1479" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signUpTest -->
-        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atmecs.demo_blazesite.SignInTest@4df50bcc]" started-at="2020-09-23T11:43:30 IST" name="closingDriver" finished-at="2020-09-23T11:43:35 IST" duration-ms="4364" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closingDriver -->
-      </class> <!-- com.atmecs.demo_blazesite.SignInTest -->
       <class name="com.atmecs.demo_blazesite.ContactUsTest">
-        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atmecs.demo_blazesite.ContactUsTest@45b9a632]" started-at="2020-09-23T11:42:43 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T11:42:51 IST" duration-ms="7976" status="PASS">
+        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atmecs.demo_blazesite.ContactUsTest@7a4ccb53]" started-at="2020-09-23T14:41:26 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T14:41:33 IST" duration-ms="6569" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- settingAndLaunchingDriver -->
-        <test-method signature="contactUsScript()[pri:4, instance:com.atmecs.demo_blazesite.ContactUsTest@45b9a632]" started-at="2020-09-23T11:43:14 IST" name="contactUsScript" finished-at="2020-09-23T11:43:15 IST" duration-ms="659" status="PASS">
+        <test-method signature="contactUsScript()[pri:0, instance:com.atmecs.demo_blazesite.ContactUsTest@7a4ccb53]" started-at="2020-09-23T14:41:47 IST" name="contactUsScript" finished-at="2020-09-23T14:41:48 IST" duration-ms="597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactUsScript -->
-        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atmecs.demo_blazesite.ContactUsTest@45b9a632]" started-at="2020-09-23T11:43:26 IST" name="closingDriver" finished-at="2020-09-23T11:43:26 IST" duration-ms="271" status="PASS">
+        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atmecs.demo_blazesite.ContactUsTest@7a4ccb53]" started-at="2020-09-23T14:41:56 IST" name="closingDriver" finished-at="2020-09-23T14:41:56 IST" duration-ms="183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingDriver -->
       </class> <!-- com.atmecs.demo_blazesite.ContactUsTest -->
-      <class name="com.atmecs.demo_blazesite.AddProductToCartTest">
-        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atmecs.demo_blazesite.AddProductToCartTest@25d250c6]" started-at="2020-09-23T11:42:11 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T11:42:43 IST" duration-ms="31907" status="PASS">
+      <class name="com.atmecs.demo_blazesite.SignInTest">
+        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atmecs.demo_blazesite.SignInTest@56a6d5a6]" started-at="2020-09-23T14:41:41 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T14:41:47 IST" duration-ms="6735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- settingAndLaunchingDriver -->
-        <test-method signature="selectAndAddToCartProduct()[pri:3, instance:com.atmecs.demo_blazesite.AddProductToCartTest@25d250c6]" started-at="2020-09-23T11:43:15 IST" name="selectAndAddToCartProduct" finished-at="2020-09-23T11:43:22 IST" duration-ms="7360" status="PASS">
+        <test-method signature="signUpTest()[pri:0, instance:com.atmecs.demo_blazesite.SignInTest@56a6d5a6]" started-at="2020-09-23T14:41:53 IST" name="signUpTest" finished-at="2020-09-23T14:41:54 IST" duration-ms="1458" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpTest -->
+        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atmecs.demo_blazesite.SignInTest@56a6d5a6]" started-at="2020-09-23T14:41:56 IST" name="closingDriver" finished-at="2020-09-23T14:42:01 IST" duration-ms="4331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingDriver -->
+      </class> <!-- com.atmecs.demo_blazesite.SignInTest -->
+      <class name="com.atmecs.demo_blazesite.AddProductToCartTest">
+        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atmecs.demo_blazesite.AddProductToCartTest@309e345f]" started-at="2020-09-23T14:41:16 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T14:41:26 IST" duration-ms="10239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingAndLaunchingDriver -->
+        <test-method signature="selectAndAddToCartProduct()[pri:0, instance:com.atmecs.demo_blazesite.AddProductToCartTest@309e345f]" started-at="2020-09-23T14:41:48 IST" name="selectAndAddToCartProduct" finished-at="2020-09-23T14:41:53 IST" duration-ms="4916" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectAndAddToCartProduct -->
-        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atmecs.demo_blazesite.AddProductToCartTest@25d250c6]" started-at="2020-09-23T11:43:24 IST" name="closingDriver" finished-at="2020-09-23T11:43:26 IST" duration-ms="1278" status="PASS">
+        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atmecs.demo_blazesite.AddProductToCartTest@309e345f]" started-at="2020-09-23T14:41:55 IST" name="closingDriver" finished-at="2020-09-23T14:41:56 IST" duration-ms="905" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingDriver -->

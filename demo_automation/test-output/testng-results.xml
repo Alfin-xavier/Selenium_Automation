@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-23T13:39:33 IST" name="Default suite" finished-at="2020-09-23T13:40:02 IST" duration-ms="28845">
+  <suite started-at="2020-09-23T14:37:39 IST" name="Suite" finished-at="2020-09-23T14:38:35 IST" duration-ms="55923">
     <groups>
     </groups>
-    <test started-at="2020-09-23T13:39:33 IST" name="Default test" finished-at="2020-09-23T13:40:02 IST" duration-ms="28845">
+    <test started-at="2020-09-23T14:37:39 IST" name="Test" finished-at="2020-09-23T14:38:35 IST" duration-ms="55923">
       <class name="com.atemcs.demo_automation.HandlingWindows">
-        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atemcs.demo_automation.HandlingWindows@15b204a1]" started-at="2020-09-23T13:39:33 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T13:39:43 IST" duration-ms="10354" status="PASS">
+        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atemcs.demo_automation.HandlingWindows@1fe20588]" started-at="2020-09-23T14:37:39 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T14:37:51 IST" duration-ms="11815" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- settingAndLaunchingDriver -->
-        <test-method signature="windowsHandling()[pri:2, instance:com.atemcs.demo_automation.HandlingWindows@15b204a1]" started-at="2020-09-23T13:39:43 IST" name="windowsHandling" finished-at="2020-09-23T13:40:02 IST" duration-ms="18352" status="PASS">
+        <test-method signature="windowsHandling()[pri:0, instance:com.atemcs.demo_automation.HandlingWindows@1fe20588]" started-at="2020-09-23T14:38:02 IST" name="windowsHandling" finished-at="2020-09-23T14:38:27 IST" duration-ms="25438" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- windowsHandling -->
-        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atemcs.demo_automation.HandlingWindows@15b204a1]" started-at="2020-09-23T13:40:02 IST" name="closingDriver" finished-at="2020-09-23T13:40:02 IST" duration-ms="79" status="PASS">
+        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atemcs.demo_automation.HandlingWindows@1fe20588]" started-at="2020-09-23T14:38:30 IST" name="closingDriver" finished-at="2020-09-23T14:38:30 IST" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingDriver -->
       </class> <!-- com.atemcs.demo_automation.HandlingWindows -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.atemcs.demo_automation.RegistrationFormFilling">
+        <test-method is-config="true" signature="settingAndLaunchingDriver()[pri:0, instance:com.atemcs.demo_automation.RegistrationFormFilling@6ce139a4]" started-at="2020-09-23T14:37:51 IST" name="settingAndLaunchingDriver" finished-at="2020-09-23T14:38:01 IST" duration-ms="10907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingAndLaunchingDriver -->
+        <test-method signature="registerationTest()[pri:0, instance:com.atemcs.demo_automation.RegistrationFormFilling@6ce139a4]" started-at="2020-09-23T14:38:27 IST" name="registerationTest" finished-at="2020-09-23T14:38:30 IST" duration-ms="3260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerationTest -->
+        <test-method is-config="true" signature="closingDriver()[pri:0, instance:com.atemcs.demo_automation.RegistrationFormFilling@6ce139a4]" started-at="2020-09-23T14:38:30 IST" name="closingDriver" finished-at="2020-09-23T14:38:35 IST" duration-ms="4357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingDriver -->
+      </class> <!-- com.atemcs.demo_automation.RegistrationFormFilling -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

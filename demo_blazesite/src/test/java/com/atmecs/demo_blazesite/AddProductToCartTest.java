@@ -5,9 +5,6 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -22,6 +19,7 @@ public class AddProductToCartTest
 	Properties properties;
 	AddProductPage addproduct;
 	DataProviders dataprovider;
+	
 	@BeforeTest
 	public void settingAndLaunchingDriver() throws IOException 
 	{
@@ -35,18 +33,14 @@ public class AddProductToCartTest
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
 	
-	@Test(priority = 3) 
+	@Test 
 	public void selectAndAddToCartProduct() throws InterruptedException 
 	{ 
 		addproduct.clickOperation(properties.getProperty("selectProduct1"));
 
 		addproduct.clickOperation(properties.getProperty("addProduct1"));
 
-		Wait<WebDriver> wait = new WebDriverWait(driver, 5);
-
-		wait.until(ExpectedConditions.alertIsPresent());
-
-		driver.switchTo().alert().accept();
+		addproduct.WaitAndSwitchToAlert();
 
 		addproduct.clickOperation(properties.getProperty("clickCart"));
 		 

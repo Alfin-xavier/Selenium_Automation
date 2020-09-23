@@ -36,7 +36,7 @@ public class ContactUsTest
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
 	
-	@Test(priority = 4)
+	@Test
 	public void contactUsScript() throws InterruptedException, IOException 
 	{
 		
@@ -50,7 +50,7 @@ public class ContactUsTest
 		
 		contactUs.clickOperation(properties.getProperty("button3"));
 		 
-		driver.switchTo().alert().accept();
+		contactUs.switchToAlert();
 		 
 		
 	}

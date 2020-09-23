@@ -21,6 +21,7 @@ public class LoginWindowHandling
 	Properties properties;
 	DataProviders dataprovider;
 	LoginWindowHandlingPage windowhandling;
+	
 	@BeforeTest
 	public void settingAndLaunchingDriver() throws IOException 
 	{
@@ -34,7 +35,7 @@ public class LoginWindowHandling
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
 	
-	@Test(priority=2) 
+	@Test
 	  public void handlingWindowTest() throws IOException, InterruptedException 
 	  { 
 		

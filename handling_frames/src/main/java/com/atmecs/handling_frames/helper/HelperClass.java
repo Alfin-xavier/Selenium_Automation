@@ -49,4 +49,14 @@ public class HelperClass
 
 		js.executeScript("arguments[0].click();", button);
 	}
+	public void jsMethods(String xpath)
+	{
+		js = (JavascriptExecutor) driver;
+
+		js.executeScript("window.scrollBy(0,1000)");
+		
+		WebElement chaticon = driver.findElement(By.xpath(xpath));
+		
+		js.executeScript("arguments[0].click();", chaticon);
+	}
 }

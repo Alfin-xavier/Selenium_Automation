@@ -19,6 +19,7 @@ public class HandlingWindows
 	Properties properties;
 	DataProviders dataprovider;
 	HandlingWindowPage handlingwindow;
+	
 	@BeforeTest
 	public void settingAndLaunchingDriver() throws IOException 
 	{
@@ -33,7 +34,7 @@ public class HandlingWindows
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
 	
-	@Test(priority=2)
+	@Test
 	public void windowsHandling() throws IOException
 	{
 		
