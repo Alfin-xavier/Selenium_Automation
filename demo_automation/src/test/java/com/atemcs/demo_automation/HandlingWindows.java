@@ -9,6 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.atmecs.demo_automation.contants.Constants;
 import com.atmecs.demo_automation.datarovider.DataProviders;
 import com.atmecs.demo_automation.helper.HandlingWindowPage;
 
@@ -22,7 +23,7 @@ public class HandlingWindows
 	public void settingAndLaunchingDriver() throws IOException 
 	{
 		
-		System.setProperty("webdriver.chrome.driver", "\\drivers\\chromedriver.exe");
+		System.setProperty(Constants.USER_DIR , Constants.CHROME_PATH);
 		driver = new ChromeDriver();
 		handlingwindow = new HandlingWindowPage(driver);
 		dataprovider = new DataProviders(driver);

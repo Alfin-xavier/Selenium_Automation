@@ -29,7 +29,7 @@ public class RegistrationPage
 		Select skills = new Select(driver.findElement(By.xpath(xpath)));
 		skills.selectByValue(value);
 	}
-	public void clickIngButton(String xpath)
+	public void clickingButton(String xpath)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		

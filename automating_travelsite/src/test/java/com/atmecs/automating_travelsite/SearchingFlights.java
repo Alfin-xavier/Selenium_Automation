@@ -1,21 +1,15 @@
 package com.atmecs.automating_travelsite;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.atmecs.automating_travelsite.constants.Constants;
 import com.atmecs.automating_travelsite.dataprovider.DataProviders;
 import com.atmecs.automating_travelsite.helpers.SearchingFlightsPage;
 
@@ -26,8 +20,9 @@ public class SearchingFlights {
 	SearchingFlightsPage searchingflights;
 
 	@BeforeTest
-	public void settingAndLaunchingDriver() throws IOException {
-		System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
+	public void settingAndLaunchingDriver() throws IOException
+	{
+		System.setProperty(Constants.USER_DIR, Constants.CHROME_PATH);
 		driver = new ChromeDriver();
 		searchingflights = new SearchingFlightsPage(driver);
 		dataprovider = new DataProviders(driver);

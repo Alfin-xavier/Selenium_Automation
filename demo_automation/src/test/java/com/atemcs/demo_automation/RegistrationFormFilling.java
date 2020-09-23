@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import com.atmecs.demo_automation.datarovider.DataProviders;
 import com.atmecs.demo_automation.datarovider.LaunchingBrowser;
+import com.atmecs.demo_automation.helper.HandlingWindowPage;
 import com.atmecs.demo_automation.helper.RegistrationPage;
 
 
@@ -21,7 +22,6 @@ public class RegistrationFormFilling
 	DataProviders dataprovider;
 	RegistrationPage registration;
 	LaunchingBrowser launching = new LaunchingBrowser();
-
 	@Test(priority = 1)
 	public void registerationTest() throws IOException 
 	{
@@ -37,13 +37,13 @@ public class RegistrationFormFilling
 
 		registration.textData(properties.getProperty("mob"), properties.getProperty("number"));
 
-		registration.clickIngButton(properties.getProperty("gender"));
+		registration.clickingButton(properties.getProperty("gender"));
 
-		registration.clickIngButton(properties.getProperty("hobbies"));
+		registration.clickingButton(properties.getProperty("hobbies"));
 
-		registration.clickIngButton(properties.getProperty("language"));
+		registration.clickingButton(properties.getProperty("language"));
 		for (int i = 1; i <= 3; i++)
-			registration.clickIngButton(properties.getProperty("multiselect"));
+			registration.clickingButton(properties.getProperty("multiselect"));
 
 		registration.selectFromDropDown(properties.getProperty("skills"), "PHP");
 
@@ -63,10 +63,9 @@ public class RegistrationFormFilling
 
 		registration.textData(properties.getProperty("confirmpass"), properties.getProperty("passvalue2"));
 
-		registration.clickIngButton(properties.getProperty("submit"));
+		registration.clickingButton(properties.getProperty("submit"));
 
-		launching.closingDriver();
 	}
-
+	
 	
 }

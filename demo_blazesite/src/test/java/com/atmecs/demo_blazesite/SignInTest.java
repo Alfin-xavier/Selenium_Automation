@@ -13,6 +13,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.atmecs.demo_blazesite.constants.Constants;
 import com.atmecs.demo_blazesite.dataprovider.DataProviders;
 import com.atmecs.demo_blazesite.helper.SignInPage;
 
@@ -25,7 +26,7 @@ public class SignInTest
 	@BeforeTest
 	public void settingAndLaunchingDriver() throws IOException 
 	{
-		System.setProperty("webdriver.chrome.driver", "\\drivers\\chromedriver.exe");
+		System.setProperty(Constants.USER_DIR , Constants.CHROME_PATH);
 		driver = new ChromeDriver();
 		dataproviders = new DataProviders(driver);
 		properties = dataproviders.dataProvider();

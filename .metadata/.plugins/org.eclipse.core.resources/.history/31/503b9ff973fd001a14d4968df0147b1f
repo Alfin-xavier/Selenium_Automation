@@ -1,0 +1,49 @@
+package com.atemcs.demo_automation;
+
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.atmecs.demo_automation.datarovider.DataProviders;
+import com.atmecs.demo_automation.helper.HandlingWindowPage;
+
+public class HandlingWindows 
+{
+	WebDriver driver;
+	Properties properties;
+	DataProviders dataprovider;
+	HandlingWindowPage handlingwindow;
+	@BeforeTest
+	public void settingAndLaunchingDriver() throws IOException 
+	{
+		
+		System.setProperty("webdriver.chrome.driver", "\\drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		handlingwindow = new HandlingWindowPage(driver);
+		dataprovider = new DataProviders(driver);
+		properties = dataprovider.dataProvider();
+		driver.get(properties.getProperty("url"));
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	}
+	
+	@Test(priority=2)
+	public void windowsHandling() throws IOException
+	{
+		
+		handlingwindow.clickingIcons(properties.getProperty("footer"), properties.getProperty("icons"));
+		
+		handlingwindow.switchingTabs();
+	}
+	
+	@AfterTest
+	public void closingDriver()
+	{
+		driver.close();
+	}
+}

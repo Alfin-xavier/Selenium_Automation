@@ -1,0 +1,35 @@
+package com.atemcs.demo_automation;
+
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.atmecs.demo_automation.datarovider.DataProviders;
+import com.atmecs.demo_automation.datarovider.LaunchingBrowser;
+import com.atmecs.demo_automation.helper.HandlingWindowPage;
+
+public class HandlingWindows extends LaunchingBrowser
+{
+	WebDriver driver;
+	Properties properties;
+	DataProviders dataprovider;
+	HandlingWindowPage handlingwindow;
+	LaunchingBrowser launching = new LaunchingBrowser();
+
+	@Test(priority=2)
+	public void windowsHandling() throws IOException
+	{
+		
+		handlingwindow.clickingIcons(properties.getProperty("footer"), properties.getProperty("icons"));
+		
+		handlingwindow.switchingTabs();
+		
+	}
+	
+	
+}

@@ -1,0 +1,6 @@
+package com.atmecs.demo_automation.contants;
+
+public class Contants 
+{
+	public static final DRIVER_PATH = "C:\\Users\\alfin.anthonyraj\\new-workspace\\demo_automation\\drivers";
+}

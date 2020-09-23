@@ -9,9 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import com.atmecs.demo_automation.contants.Constants;
 import com.atmecs.demo_automation.helper.HandlingWindowPage;
 import com.atmecs.demo_automation.helper.RegistrationPage;
-
 
 public class LaunchingBrowser 
 {
@@ -22,10 +22,10 @@ public class LaunchingBrowser
 	RegistrationPage registration;
 	
 	@BeforeTest
-	public Properties settingAndLaunchingDriver() throws IOException 
+	public void settingAndLaunchingDriver() throws IOException 
 	{
 		
-		System.setProperty("webdriver.chrome.driver", "\\drivers\\chromedriver.exe");
+		System.setProperty(Constants.USER_DIR , Constants.CHROME_PATH);
 		driver = new ChromeDriver();
 		handlingwindow = new HandlingWindowPage(driver);
 		registration = new RegistrationPage(driver);
@@ -34,7 +34,6 @@ public class LaunchingBrowser
 		driver.get(properties.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		return properties;
 		
 	}
 	

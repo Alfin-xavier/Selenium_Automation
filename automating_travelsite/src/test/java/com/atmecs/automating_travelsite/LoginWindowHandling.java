@@ -10,6 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.atmecs.automating_travelsite.constants.Constants;
 import com.atmecs.automating_travelsite.dataprovider.DataProviders;
 import com.atmecs.automating_travelsite.helpers.LoginWindowHandlingPage;
 
@@ -23,7 +24,7 @@ public class LoginWindowHandling
 	@BeforeTest
 	public void settingAndLaunchingDriver() throws IOException 
 	{
-		System.setProperty("webdriver.chrome.driver", "\\drivers\\chromedriver.exe");
+		System.setProperty(Constants.USER_DIR, Constants.CHROME_PATH);
 		driver = new ChromeDriver();
 		dataprovider = new DataProviders(driver);
 		properties = dataprovider.dataProvider();
