@@ -1,7 +1,7 @@
 package com.atmecs.automating_travelsite.helpers;
 
-import java.util.Properties;
-
+import java.util.Iterator;
+import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,25 +10,30 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SearchingFlightsPage 
+public class Helpers 
 {
 	WebDriver driver;
-	Properties properties;
-	
-	public SearchingFlightsPage(WebDriver driver)
+
+	public Helpers(WebDriver driver) 
 	{
 		this.driver = driver;
 	}
 
 	public void textData(String xpath, String value)
 	{
-		 WebElement susername = driver.findElement(By.xpath(xpath));
-		  susername.sendKeys(value);
+		WebElement susername = driver.findElement(By.xpath(xpath));
+		susername.sendKeys(value);
 	}
-	public void clickOpertaion(String xpath)
+
+	public void switchWindow()
 	{
-		driver.findElement(By.xpath(xpath)).click();
+		Set<String> ids = driver.getWindowHandles(); 
+		Iterator<String> windows = ids.iterator();
+		String parentWindow = windows.next();
+		String childwindow = windows.next(); 
+		driver.switchTo().window(childwindow);
 	}
+	
 	public void selectFromDropDown(String xpath, String value)
 	{
 		 Select cabinclass = new Select(driver.findElement(By.id(xpath)));
@@ -49,5 +54,10 @@ public class SearchingFlightsPage
 		Wait<WebDriver> wait = new WebDriverWait(driver,5);
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(xpath))));
 		driver.findElement(By.xpath(xpath)).click();
+	}
+
+	public void clickOpertaion(String xpath) 
+	{
+		driver.findElement(By.xpath(xpath)).click();;
 	}
 }

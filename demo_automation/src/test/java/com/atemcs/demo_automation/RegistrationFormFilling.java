@@ -40,23 +40,41 @@ public class RegistrationFormFilling
 	public void registerationTest() throws IOException 
 	{
 		registration.textData(properties.getProperty("firstname"), properties.getProperty("fname"));
+		
 		registration.textData(properties.getProperty("lastname"), properties.getProperty("lname"));
+		
 		registration.textData(properties.getProperty("address"), properties.getProperty("addressvalue"));
+		
 		registration.textData(properties.getProperty("gmail"), properties.getProperty("mail"));
+		
 		registration.textData(properties.getProperty("mob"), properties.getProperty("number"));
+		
 		registration.clickingButton(properties.getProperty("gender"));
+		
 		registration.clickingButton(properties.getProperty("hobbies"));
+		
 		registration.clickingButton(properties.getProperty("language"));
+		
 		registration.clickingCountry(properties.getProperty("multiselect"));
+		
 		registration.selectFromDropDown(properties.getProperty("skills"), "PHP");
+		
 		registration.selectFromDropDown(properties.getProperty("countries"), "India");
+		
 		registration.clickOperation(properties.getProperty("selectcountry"));
+		
 		registration.clickOperation(properties.getProperty("country"));
+		
 		registration.selectFromDropDown(properties.getProperty("year"), "1996");
+		
 		registration.selectFromDropDown(properties.getProperty("month"), "August");
+		
 		registration.selectFromDropDown(properties.getProperty("date"), "11");
+		
 		registration.textData(properties.getProperty("password"), properties.getProperty("passvalue1"));
+		
 		registration.textData(properties.getProperty("confirmpass"), properties.getProperty("passvalue2"));
+		
 		registration.clickingButton(properties.getProperty("submit"));
 
 	}

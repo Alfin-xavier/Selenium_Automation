@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.atmecs.automating_travelsite.LoginWindowHandling"/>
-      <class name="com.atmecs.automating_travelsite.SearchingFlights"/>
+      <class name="com.atmecs.automating_travelsite.pagehelper.LoginWindowHandling"/>
+      <class name="com.atmecs.automating_travelsite.pagehelper.SearchingFlights"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,4 +1,4 @@
-package com.atmecs.automating_travelsite.dataprovider;
+package com.atmecs.automating_travelsite.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,12 +8,12 @@ import org.openqa.selenium.WebDriver;
 
 import com.atmecs.automating_travelsite.constants.Constants;
 
-public class DataProviders 
+public class UtilitiesFiles 
 {
 	WebDriver driver;
 	 Properties properties;
 	 
-	public DataProviders(WebDriver driver)
+	public UtilitiesFiles(WebDriver driver)
 	{
 		this.driver = driver;
 	}
