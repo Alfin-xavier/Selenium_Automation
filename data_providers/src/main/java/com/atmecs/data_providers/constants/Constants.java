@@ -5,5 +5,5 @@ public class Constants
 	public static final String USER_DIR = "webdriver.chrome.driver";
 	public static final String CHROME_DIR = "\\drivers\\chromedriver.exe";
 	public static final String SITE_URL = "https:\\wwww.facebook.com";
-	public static final String SCREEN_SHOTS = "./screenshots/facebookerror.png";
+	public static final String SCREEN_SHOTS = "./screenshots/";
 }

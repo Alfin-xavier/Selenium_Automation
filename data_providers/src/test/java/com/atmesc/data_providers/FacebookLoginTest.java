@@ -1,13 +1,9 @@
 package com.atmesc.data_providers;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -43,7 +39,7 @@ public class FacebookLoginTest
 
 		System.out.println(driver.getTitle());
 
-		TakeScreenShot.takeScreenshot(driver);
+		TakeScreenShot.takeScreenshot(driver, "errorPage");
 
 	}
 

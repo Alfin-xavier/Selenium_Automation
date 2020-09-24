@@ -20,13 +20,13 @@ public class TakeScreenShot
 		this.driver = driver;
 	}
 	
-	public static void takeScreenshot(WebDriver driver) throws IOException 
+	public static void takeScreenshot(WebDriver driver, String screenshotName) throws IOException 
 	{
 		TakesScreenshot screenshot = ((TakesScreenshot) driver);
 		
 		File source = screenshot.getScreenshotAs(OutputType.FILE);
 
-		FileUtils.copyFile(source, new File(Constants.SCREEN_SHOTS));
+		FileUtils.copyFile(source, new File(Constants.SCREEN_SHOTS+screenshotName+".png"));
 		
 		
 	}
