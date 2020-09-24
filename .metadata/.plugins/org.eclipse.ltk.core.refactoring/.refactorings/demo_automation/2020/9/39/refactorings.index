@@ -12,3 +12,11 @@
 1600857975266	Copy folder
 1600865813424	Copy folder
 1600872892707	Copy folder
+1600950298138	Rename package 'com.atmecs.demo_automation.datarovider'
+1600950308825	Delete element
+1600950350114	Rename type 'DataProviders'
+1600950463420	Rename package 'com.atmecs.demo_automation.helper'
+1600950676814	Delete element
+1600950681921	Delete element
+1600951254984	Rename package 'com.atmecs.demo_automation.pagehelper'
+1600951294696	Move compilation units

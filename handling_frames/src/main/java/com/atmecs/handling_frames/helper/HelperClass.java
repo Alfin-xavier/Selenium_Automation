@@ -16,23 +16,28 @@ public class HelperClass
 	WebDriver driver;
 	Properties properties;
 	JavascriptExecutor js;
+	
 	public HelperClass(WebDriver driver)
 	{
 		this.driver = driver;
 	}
+	
 	public void textDatas(String xpath, String values)
 	{
 		driver.findElement(By.xpath(xpath)).sendKeys(values);
 	}
+	
 	public void selectValueFromDropDown(String xpath, String values)
 	{
 		Select selectValue = new Select(driver.findElement(By.xpath(xpath)));
 		selectValue.selectByValue(values);
 	}
+	
 	public void clickOperation(String xpath)
 	{
 		driver.findElement(By.xpath(xpath)).click();
 	}
+	
 	public void switchToFrame(String xpath) 
 	{
 		Wait<WebDriver> wait = new WebDriverWait(driver, 30);
@@ -43,12 +48,14 @@ public class HelperClass
 
 		driver.switchTo().frame(frame);
 	}
+	
 	public void clickable(String xpath)
 	{
 		WebElement button = driver.findElement(By.xpath(xpath));
 
 		js.executeScript("arguments[0].click();", button);
 	}
+	
 	public void jsMethods(String xpath)
 	{
 		js = (JavascriptExecutor) driver;
