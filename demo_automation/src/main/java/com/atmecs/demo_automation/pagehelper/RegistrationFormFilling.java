@@ -2,59 +2,73 @@ package com.atmecs.demo_automation.pagehelper;
 
 import java.io.IOException;
 import java.util.Properties;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
 
+import org.openqa.selenium.WebDriver;
+
+import com.atmecs.demo_automation.contants.Constants;
 import com.atmecs.demo_automation.helper.Helpers;
-import com.atmecs.demo_automation.utilities.UtilityFiles;
+import com.atmecs.demo_automation.utilities.PropertyReader;
 
 public class RegistrationFormFilling 
 {
-	WebDriver driver;
-	Properties properties;
-	UtilityFiles dataprovider;
+public WebDriver driver;
+	
 	Helpers helpers;
 	
-	@Test
+	Properties data;
+	
+	Properties locatorsFile;
+	
+	public RegistrationFormFilling(WebDriver driver)
+	{
+		this.driver = driver;
+	}
+	
 	public void registerationTest() throws IOException 
 	{
-		helpers.textData(properties.getProperty("firstname"), properties.getProperty("fname"));
+		helpers = new Helpers(driver);
+
+		locatorsFile = PropertyReader.readProperties(Constants.LOCATORS);
+
+		data = PropertyReader.readProperties(Constants.DATAS);
 		
-		helpers.textData(properties.getProperty("lastname"), properties.getProperty("lname"));
+		helpers.textData(locatorsFile.getProperty("firstname"), data.getProperty("fname"));
 		
-		helpers.textData(properties.getProperty("address"), properties.getProperty("addressvalue"));
+		helpers.textData(locatorsFile.getProperty("lastname"), data.getProperty("lname"));
 		
-		helpers.textData(properties.getProperty("gmail"), properties.getProperty("mail"));
+		helpers.textData(locatorsFile.getProperty("address"), data.getProperty("addressvalue"));
 		
-		helpers.textData(properties.getProperty("mob"), properties.getProperty("number"));
+		helpers.textData(locatorsFile.getProperty("gmail"), data.getProperty("mail"));
 		
-		helpers.clickingButton(properties.getProperty("gender"));
+		helpers.textData(locatorsFile.getProperty("mob"), data.getProperty("number"));
 		
-		helpers.clickingButton(properties.getProperty("hobbies"));
+		helpers.clickingButton(locatorsFile.getProperty("gender"));
 		
-		helpers.clickingButton(properties.getProperty("language"));
+		helpers.clickingButton(locatorsFile.getProperty("hobbies"));
 		
-		helpers.clickingCountry(properties.getProperty("multiselect"));
+		helpers.clickingButton(locatorsFile.getProperty("language"));
 		
-		helpers.selectFromDropDown(properties.getProperty("skills"), "PHP");
+		helpers.clickingCountry(locatorsFile.getProperty("multiselect"));
 		
-		helpers.selectFromDropDown(properties.getProperty("countries"), "India");
+		helpers.selectFromDropDown(locatorsFile.getProperty("skills"), "PHP");
 		
-		helpers.clickOperation(properties.getProperty("selectcountry"));
+		helpers.selectFromDropDown(locatorsFile.getProperty("countries"), "India");
 		
-		helpers.clickOperation(properties.getProperty("country"));
+		helpers.clickOperation(locatorsFile.getProperty("selectcountry"));
 		
-		helpers.selectFromDropDown(properties.getProperty("year"), "1996");
+		helpers.clickOperation(locatorsFile.getProperty("country"));
 		
-		helpers.selectFromDropDown(properties.getProperty("month"), "August");
+		helpers.selectFromDropDown(locatorsFile.getProperty("year"), "1996");
 		
-		helpers.selectFromDropDown(properties.getProperty("date"), "11");
+		helpers.selectFromDropDown(locatorsFile.getProperty("month"), "August");
 		
-		helpers.textData(properties.getProperty("password"), properties.getProperty("passvalue1"));
+		helpers.selectFromDropDown(locatorsFile.getProperty("date"), "11");
 		
-		helpers.textData(properties.getProperty("confirmpass"), properties.getProperty("passvalue2"));
+		helpers.textData(locatorsFile.getProperty("password"), data.getProperty("passvalue1"));
 		
-		helpers.clickingButton(properties.getProperty("submit"));
+		helpers.textData(locatorsFile.getProperty("confirmpass"), data.getProperty("passvalue2"));
+		
+		helpers.clickingButton(locatorsFile.getProperty("submit"));
 
 	}
 	

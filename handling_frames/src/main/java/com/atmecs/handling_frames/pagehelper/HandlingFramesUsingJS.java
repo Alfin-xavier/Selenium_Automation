@@ -4,35 +4,50 @@ package com.atmecs.handling_frames.pagehelper;
 
 import java.io.IOException;
 import java.util.Properties;
-import org.openqa.selenium.*;
-import org.testng.annotations.*;
+import org.openqa.selenium.WebDriver;
+
+import com.atmecs.handling_frames.constant.Constants;
 import com.atmecs.handling_frames.helper.HelperClass;
+import com.atmecs.handling_frames.utilities.PropertyReader;
 
 public class HandlingFramesUsingJS 
 {
-	WebDriver driver;
-	JavascriptExecutor js;
-	Properties properties;
-	HelperClass helperclass;
+	public WebDriver driver;
 
-	@Test
+	HelperClass helpers;
+
+	Properties locatorsFile;
+	
+	Properties datas;
+	
+	public HandlingFramesUsingJS(WebDriver driver) 
+	{
+		this.driver = driver;
+	}
+
 	public void handlingFrameAndClickChatIconTest() throws InterruptedException, IOException
 	{
-		helperclass.switchToFrame(properties.getProperty("frame"));
+		helpers = new HelperClass(driver);
+
+		locatorsFile = PropertyReader.readProperties(Constants.LOCATORS);
+
+		datas = PropertyReader.readProperties(Constants.DATAS);
 		
-		helperclass.jsMethods(properties.getProperty("chaticon"));
+		helpers.switchToFrame(locatorsFile.getProperty("frame"));
 		
-		helperclass.textDatas(properties.getProperty("username"), properties.getProperty("name"));
-
-		helperclass.textDatas(properties.getProperty("mob"), properties.getProperty("number"));
-
-		helperclass.textDatas(properties.getProperty("usermail"), properties.getProperty("gmail"));
+		helpers.jsMethods(locatorsFile.getProperty("chaticon"));
 		
-		helperclass.clickOperation(properties.getProperty("checkbox"));
+		helpers.textDatas(locatorsFile.getProperty("username"), datas.getProperty("name"));
 
-		helperclass.selectValueFromDropDown(properties.getProperty("client"), "index1_1");
+		helpers.textDatas(locatorsFile.getProperty("mob"), datas.getProperty("number"));
 
-		helperclass.clickOperation(properties.getProperty("button"));
+		helpers.textDatas(locatorsFile.getProperty("usermail"), datas.getProperty("gmail"));
+		
+		helpers.clickOperation(locatorsFile.getProperty("checkbox"));
+
+		helpers.selectValueFromDropDown(locatorsFile.getProperty("client"), "index1_1");
+
+		helpers.clickOperation(locatorsFile.getProperty("button"));
 		
 	}
 	

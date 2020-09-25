@@ -15,3 +15,9 @@
 1600952249931	Delete element
 1600952289107	Rename package 'com.atmecs.demo_blazesite.pagehelpers'
 1600952313272	Move compilation units
+1601028151411	Rename resource 'drivers'
+1601028423035	Rename resource 'testdatas'
+1601028457200	Delete element
+1601028555328	Rename resource 'testdatas.properties'
+1601028738637	Delete element
+1601028798712	Rename compilation unit 'DataReader.java'

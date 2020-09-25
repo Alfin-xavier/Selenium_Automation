@@ -3,10 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.atmecs.demo_blazesite.ContactUsTest"/>
-      <class name="com.atmecs.demo_blazesite.AddProductToCartTest"/>
-      <class name="com.atmecs.demo_blazesite.SignInTest"/>
-      <class name="com.atmecs.demo_blazesite.LogInTest"/>
+      <class name="com.atmecs.demo_blazesite.AddProduct"/>
+      <class name="com.atmecs.demo_blazesite.SignIn"/>
+      <class name="com.atmecs.demo_blazesite.ContactUs"/>
+      <class name="com.atmecs.demo_blazesite.Login"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

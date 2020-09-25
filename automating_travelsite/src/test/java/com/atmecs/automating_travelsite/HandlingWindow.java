@@ -13,7 +13,7 @@ public class HandlingWindow extends BaseTest
 	@Test
 	public void handlinWindow() throws IOException, InterruptedException
 	{
-		LoginWindowHandling login = new LoginWindowHandling();
+		LoginWindowHandling login = new LoginWindowHandling(driver);
 
 		login.handlingWindowTest();
 

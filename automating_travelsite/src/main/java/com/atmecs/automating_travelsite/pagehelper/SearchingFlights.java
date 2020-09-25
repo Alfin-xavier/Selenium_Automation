@@ -1,36 +1,53 @@
 package com.atmecs.automating_travelsite.pagehelper;
 
 import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
+
+import com.atmecs.automating_travelsite.constants.Constants;
 import com.atmecs.automating_travelsite.helpers.Helpers;
+import com.atmecs.automating_travelsite.utilities.PropertyReader;
 
 public class SearchingFlights 
 {
-	WebDriver driver;
-	Properties properties;
+	public WebDriver driver;
+	
 	Helpers helpers;
+	
+	Properties data;
+	
+	Properties locatorsFile;
+	
+	public SearchingFlights(WebDriver driver)
+	{
+		this.driver = driver;
+	}
 
-	@Test
 	public void twoWayTripSelectionTest() throws InterruptedException 
 	{
-		helpers.checkbox(properties.getProperty("roundtrip"));
+		helpers = new Helpers(driver);
 
-		helpers.textData(properties.getProperty("source"), properties.getProperty("sourcevalue"));
-		
-		helpers.textData(properties.getProperty("destination"), properties.getProperty("destinationvalue"));
-		
-		helpers.clickOpertaion(properties.getProperty("date1"));
-		
-		helpers.clickOpertaion(properties.getProperty("departdate"));
+		locatorsFile = PropertyReader.readProperties(Constants.LOCATORS);
 
-		helpers.clickOpertaion(properties.getProperty("date2"));
+		data = PropertyReader.readProperties(Constants.DATAS);
 
-		helpers.clickOpertaion(properties.getProperty("returndate"));
-		
-		helpers.clickOpertaion(properties.getProperty("checkbox"));
+		helpers.checkbox(locatorsFile.getProperty("roundtrip"));
 
-		helpers.clickOpertaion(properties.getProperty("searchflight"));
+		helpers.textData(locatorsFile.getProperty("source"), data.getProperty("sourcevalue"));
+
+		helpers.textData(locatorsFile.getProperty("destination"), data.getProperty("destinationvalue"));
+
+		helpers.clickOpertaion(locatorsFile.getProperty("date1"));
+
+		helpers.clickOpertaion(locatorsFile.getProperty("departdate"));
+
+		helpers.clickOpertaion(locatorsFile.getProperty("date2"));
+
+		helpers.clickOpertaion(locatorsFile.getProperty("returndate"));
+
+		helpers.clickOpertaion(locatorsFile.getProperty("checkbox"));
+
+		helpers.clickOpertaion(locatorsFile.getProperty("searchflight"));
 
 	}
 

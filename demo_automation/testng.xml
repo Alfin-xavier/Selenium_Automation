@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.atemcs.demo_automation.HandlingWindows"/>
-      <class name="com.atemcs.demo_automation.RegistrationFormFilling"/>
+      <class name="com.atemcs.demo_automation.Registration"/>
+      <class name="com.atemcs.demo_automation.HandlingIconWindows"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

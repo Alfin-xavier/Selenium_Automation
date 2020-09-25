@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Helpers 
 {
-	WebDriver driver;
+	public WebDriver driver;
 
 	public Helpers(WebDriver driver) 
 	{
@@ -36,7 +36,7 @@ public class Helpers
 	
 	public void selectFromDropDown(String xpath, String value)
 	{
-		 Select cabinclass = new Select(driver.findElement(By.id(xpath)));
+		 Select cabinclass = new Select(driver.findElement(By.xpath(xpath)));
 		 cabinclass.selectByValue(value);
 	}
 	public void locatePath(String xpath)
@@ -58,6 +58,6 @@ public class Helpers
 
 	public void clickOpertaion(String xpath) 
 	{
-		driver.findElement(By.xpath(xpath)).click();;
+		driver.findElement(By.xpath(xpath)).click();
 	}
 }

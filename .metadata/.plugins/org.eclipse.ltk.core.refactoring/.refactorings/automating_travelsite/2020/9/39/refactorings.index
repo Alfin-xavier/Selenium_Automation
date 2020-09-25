@@ -11,3 +11,9 @@
 1600950729501	Rename package 'com.atmecs.automating_travelsite.baseFiles'
 1600950750256	Rename package 'com.atmecs.automating_travelsite.basefiles'
 1600961998385	Delete element
+1601021887572	Rename resource 'locators'
+1601022045143	Rename type 'UtilitiesFiles'
+1601022361651	Rename resource 'drivers'
+1601025178239	Move file
+1601025206100	Delete element
+1601025219724	Rename resource 'locatorPaths.properties'

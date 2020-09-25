@@ -3,24 +3,31 @@ package com.atmecs.demo_automation.pagehelper;
 import java.io.IOException;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
-
+import com.atmecs.demo_automation.contants.Constants;
 import com.atmecs.demo_automation.helper.Helpers;
-import com.atmecs.demo_automation.utilities.UtilityFiles;
+import com.atmecs.demo_automation.utilities.PropertyReader;
 
 public class HandlingWindows 
 {
-	WebDriver driver;
-	Properties properties;
-	UtilityFiles dataprovider;
+	public WebDriver driver;
+
 	Helpers helpers;
-	
-	@Test
-	public void windowsHandling() throws IOException
+
+	Properties locatorsFile;
+
+	public HandlingWindows(WebDriver driver) 
 	{
-		
-		helpers.clickingIcons(properties.getProperty("footer"), properties.getProperty("icons"));
-		
+		this.driver = driver;
+	}
+
+	public void windowsHandling() throws IOException 
+	{
+		helpers = new Helpers(driver);
+
+		locatorsFile = PropertyReader.readProperties(Constants.LOCATORS);
+
+		helpers.clickingIcons(locatorsFile.getProperty("footer"), locatorsFile.getProperty("icons"));
+
 		helpers.switchingTabs();
 	}
 

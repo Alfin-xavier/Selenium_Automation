@@ -5,34 +5,36 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import com.atmecs.automating_travelsite.constants.Constants;
 import com.atmecs.automating_travelsite.helpers.Helpers;
-import com.atmecs.automating_travelsite.utilities.UtilitiesFiles;
+import com.atmecs.automating_travelsite.utilities.PropertyReader;
 
 public class BaseTest 
 {
-	WebDriver driver;
-	Helpers helpers;
+	public	WebDriver driver;
 	Properties properties;
-	UtilitiesFiles dataprovider;
+	String baseUrl;
+	String browserUrl;
 	
-	@BeforeTest
+	@BeforeMethod
 	public void beforeTest() throws InterruptedException, IOException 
 	{
+		properties = PropertyReader.readProperties(Constants.CONFIG);
+		baseUrl = properties.getProperty("url");
+		browserUrl = properties.getProperty("browser");
+		
 		System.setProperty(Constants.USER_DIR, Constants.CHROME_PATH);
 		driver = new ChromeDriver();
-		helpers = new Helpers(driver);
-		dataprovider = new UtilitiesFiles(driver);
-		properties = dataprovider.dataProvider();
-		driver.get(properties.getProperty("url"));
+		driver.get(baseUrl);
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void afterTest() 
 	{
 		driver.close();

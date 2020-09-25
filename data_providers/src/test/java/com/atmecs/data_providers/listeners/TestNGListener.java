@@ -7,35 +7,37 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.atmecs.data_providers.helpers.TakeScreenShot;
+import com.atmecs.data_providers.takescreenshot.TakeScreenShot;
+import com.atmesc.data_providers.FacebookLoginTest;
 
-public class TestNGListener implements ITestListener
+public class TestNGListener extends FacebookLoginTest implements ITestListener 
 {
 	WebDriver driver;
 
 	@Override
 	public void onTestStart(ITestResult result) 
 	{
-		
+		System.out.println("");
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) 
 	{
-		System.out.println("Test has Passed Successfully!!");
+		System.out.println("Test has been Passed Successfully!!"+result.getTestName());
+		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) 
 	{
 		try 
-		{
-			TakeScreenShot.takeScreenshot(driver, "FacebookLoginError");
-		} catch (IOException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		  { 
+			  takeScreenshot("FacebookLoginError");
+		  } 
+		  catch(IOException e)
+		  { 
+			  e.printStackTrace(); 
+		  }
 	
 	}
 

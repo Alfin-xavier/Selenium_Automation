@@ -2,35 +2,50 @@ package com.atmecs.automating_travelsite.pagehelper;
 
 import java.io.IOException;
 import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
+
+import com.atmecs.automating_travelsite.basetest.BaseTest;
+import com.atmecs.automating_travelsite.constants.Constants;
 import com.atmecs.automating_travelsite.helpers.Helpers;
+import com.atmecs.automating_travelsite.utilities.PropertyReader;
 
 public class LoginWindowHandling 
 {
-	WebDriver driver;
-	Properties properties;
+	public WebDriver driver;
+	
 	Helpers helpers;
 	
-	@Test
+	Properties data;
+	
+	Properties locatorsFile;
+	
+	public LoginWindowHandling(WebDriver driver)
+	{
+		this.driver = driver;
+	}
+	
 	  public void handlingWindowTest() throws IOException, InterruptedException 
 	  { 
+		 helpers = new Helpers(driver);
+		 
+		 locatorsFile = PropertyReader.readProperties(Constants.LOCATORS);
+		 
+		 data = PropertyReader.readProperties(Constants.DATAS);
 		
-		helpers.clickOpertaion(properties.getProperty("login"));
+		helpers.clickOpertaion(locatorsFile.getProperty("login"));
 
-		helpers.clickOpertaion(properties.getProperty("gmail"));
+		helpers.clickOpertaion(locatorsFile.getProperty("gmail"));
 		
 		helpers.switchWindow();
 	  
-		helpers.textData(properties.getProperty("username"), properties.getProperty("name"));
+		helpers.textData(locatorsFile.getProperty("username"), data.getProperty("name"));
 		
-		helpers.clickOpertaion(properties.getProperty("button1"));
+		helpers.clickOpertaion(locatorsFile.getProperty("button1"));
 		
-		helpers.textData(properties.getProperty("userpassword"), properties.getProperty("password"));
+		helpers.textData(locatorsFile.getProperty("userpassword"), data.getProperty("password"));
 
-		helpers.clickOpertaion(properties.getProperty("button2"));
+		helpers.clickOpertaion(locatorsFile.getProperty("button2"));
 
 	  }
-	
-	
 }

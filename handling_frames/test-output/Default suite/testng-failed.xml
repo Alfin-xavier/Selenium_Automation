@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.handling_frames.HandlingFramesUsingJS">
+      <class name="com.atmecs.handling_frames.HandlingFrames">
         <methods>
-          <include name="closingDriver"/>
-          <include name="settingAndLaunchingDriver"/>
-          <include name="handlingFrameAndClickChatIconTest"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="handlingFrames"/>
         </methods>
-      </class> <!-- com.atmecs.handling_frames.HandlingFramesUsingJS -->
+      </class> <!-- com.atmecs.handling_frames.HandlingFrames -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

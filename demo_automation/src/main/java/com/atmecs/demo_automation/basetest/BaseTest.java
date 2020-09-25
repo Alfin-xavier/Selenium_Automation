@@ -5,37 +5,39 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
 import com.atmecs.demo_automation.contants.Constants;
-import com.atmecs.demo_automation.helper.Helpers;
-import com.atmecs.demo_automation.utilities.UtilityFiles;
+import com.atmecs.demo_automation.utilities.PropertyReader;
 
 public class BaseTest 
 {
-	WebDriver driver;
+	public	WebDriver driver;
 	Properties properties;
-	UtilityFiles dataprovider;
-	Helpers helpers;
+	String baseUrl;
+	String browserUrl;
 	
-	@BeforeTest
-	public void settingAndLaunchingDriver() throws IOException 
+	@BeforeMethod
+	public void beforeTest() throws InterruptedException, IOException 
 	{
+		properties = PropertyReader.readProperties(Constants.CONFIG);
+		baseUrl = properties.getProperty("url");
+		browserUrl = properties.getProperty("browser");
 		
-		System.setProperty(Constants.USER_DIR , Constants.CHROME_PATH);
+		System.setProperty(Constants.USER_DIR, Constants.CHROME_PATH);
 		driver = new ChromeDriver();
-		helpers = new Helpers(driver);
-		dataprovider = new UtilityFiles(driver);
-		properties = dataprovider.dataProvider();
-		driver.get(properties.getProperty("url"));
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.get(baseUrl);
 		
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+
 	}
-	
-	@AfterTest
-	public void closingDriver()
+
+	@AfterMethod
+	public void afterTest() 
 	{
 		driver.close();
+
 	}
 }
