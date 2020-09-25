@@ -6,19 +6,22 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.atmecs.data_providers.constants.Constants;
 import com.atmecs.data_providers.helpers.TakeScreenShot;
+import com.atmecs.data_providers.utilities.ReadDataFromExcel;
 
+@Listeners(com.atmecs.data_providers.listeners.TestNGListener.class)
 public class FacebookLoginTest 
 {
 	WebDriver driver;
 	Properties properties;
-	TakeScreenShot takeScreenshot;
-	
+
 	@Test(dataProvider = "facebookLogin")
 	public void loginTest(String username, String password) throws IOException 
 	{
@@ -36,28 +39,30 @@ public class FacebookLoginTest
 		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys(password);
 
 		driver.findElement(By.xpath("//button[@name='login']")).click();
-
-		System.out.println(driver.getTitle());
-
-		TakeScreenShot.takeScreenshot(driver, "errorPage");
-
+		
 	}
+	
 
 	@DataProvider(name = "facebookLogin")
-	public Object[][] datas() 
+	
+	public void readDataFromExcel() throws IOException
 	{
-		Object[][] data = new Object[2][2];
-
-		data[0][0] = "abc@gmail.com";
-		data[0][1] = "abc";
-
-		data[1][0] = "def@gmail.com";
-		data[1][1] = "def";
-
-		return data;
-
+		ReadDataFromExcel.ReadData();
 	}
-
+	
+	/*
+	 * public Object[][] datas() { Object[][] data = new Object[2][2];
+	 * 
+	 * data[0][0] = "abc@gmail.com"; data[0][1] = "abc";
+	 * 
+	 * data[1][0] = "def@gmail.com"; data[1][1] = "def";
+	 * 
+	 * return data;
+	 * 
+	 * }
+	 */
+	
+	
 	@AfterTest
 	public void closingDriver()
 	{

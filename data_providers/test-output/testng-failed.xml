@@ -5,7 +5,7 @@
     <classes>
       <class name="com.atmesc.data_providers.FacebookLoginTest">
         <methods>
-          <include name="loginTest" invocation-numbers="0 1"/>
+          <include name="loginTest"/>
           <include name="closingDriver"/>
         </methods>
       </class> <!-- com.atmesc.data_providers.FacebookLoginTest -->
