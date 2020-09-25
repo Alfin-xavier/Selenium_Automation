@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
-import com.atmecs.data_providers.takescreenshot.TakeScreenShot;
 import com.atmesc.data_providers.FacebookLoginTest;
 
 public class TestNGListener extends FacebookLoginTest implements ITestListener 

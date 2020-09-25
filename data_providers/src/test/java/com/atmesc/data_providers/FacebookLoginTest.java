@@ -3,21 +3,17 @@ package com.atmesc.data_providers;
 import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.atmecs.data_providers.constants.Constants;
-import com.atmecs.data_providers.utilities.ReadDataFromExcel;
 
 
 public class FacebookLoginTest 
@@ -25,7 +21,7 @@ public class FacebookLoginTest
 	WebDriver driver;
 	Properties properties;
 	
-	@Test(priority =1 , dataProvider = "facebookLogin")
+	@Test(dataProvider = "facebookLogin")
 	public void loginTest(String username, String password) throws IOException 
 	{
 		
@@ -70,14 +66,6 @@ public class FacebookLoginTest
 
 	}
 	
-	@Test(priority = 2)
-	
-	public void validatePage()
-	{
-		Assert.assertTrue(driver.getTitle().contains("faceBook"));
-		
-	}
-	
 	public void takeScreenshot(String screenshotName) throws IOException 
 	{
 		TakesScreenshot screenshot = ((TakesScreenshot) driver);
@@ -88,7 +76,6 @@ public class FacebookLoginTest
 		
 	}
 	 
-	
 	@AfterTest
 	public void closingDriver()
 	{
