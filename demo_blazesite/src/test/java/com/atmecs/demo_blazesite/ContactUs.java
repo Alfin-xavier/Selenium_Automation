@@ -19,7 +19,7 @@ public class ContactUs extends BaseTest
 		
 	}
 	
-	@Test
+	@Test(dataProvider = "readData")
 	public void contactUs(String mail, String name, String message) throws InterruptedException, IOException
 	{
 		ContactUsTest contactus = new ContactUsTest(driver);

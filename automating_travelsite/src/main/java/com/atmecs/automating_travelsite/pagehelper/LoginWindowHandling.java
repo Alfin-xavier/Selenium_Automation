@@ -39,7 +39,7 @@ public class LoginWindowHandling
 		
 		helpers.clickOpertaion(locatorsFile.getProperty("button1"));
 		
-		driver.findElement(By.xpath(locatorsFile.getProperty("username"))).sendKeys(PassWord);
+		driver.findElement(By.xpath(locatorsFile.getProperty("userpassword"))).sendKeys(PassWord);
 
 		helpers.clickOpertaion(locatorsFile.getProperty("button2"));
 

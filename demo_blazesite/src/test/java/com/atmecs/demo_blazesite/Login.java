@@ -19,7 +19,7 @@ public class Login extends BaseTest
 		return data;
 	}
 	
-	@Test
+	@Test(dataProvider = "readData")
 	public void logIn(String username, String password) 
 	{
 		LogInTest login = new LogInTest(driver);

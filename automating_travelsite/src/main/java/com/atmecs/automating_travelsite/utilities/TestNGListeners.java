@@ -26,7 +26,7 @@ public class TestNGListeners implements ITestListener
 	@Override
 	public void onTestFailure(ITestResult result) 
 	{
-		System.out.println(result.getMethod().getMethodName());
+		System.out.println(result.getTestName());
 
 		try 
 		{

@@ -19,7 +19,7 @@ public class SignIn extends BaseTest
 		return data;
 	}
 	
-	@Test
+	@Test(dataProvider = "readData")
 	public void signIn(String username, String password) throws InterruptedException, IOException
 	{
 		SignInTest signin = new SignInTest(driver);

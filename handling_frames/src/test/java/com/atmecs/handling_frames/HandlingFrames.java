@@ -18,7 +18,7 @@ public class HandlingFrames extends BaseTest
 		return data;
 	}
 	
-	@Test
+	@Test(dataProvider = "readData")
 	public void handlingFrames(String name, String number, String mail)
 	{
 		HandlingFramesUsingJS frames = new HandlingFramesUsingJS(driver);

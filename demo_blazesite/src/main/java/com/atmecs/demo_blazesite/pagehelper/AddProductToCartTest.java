@@ -29,7 +29,7 @@ public class AddProductToCartTest
 
 		helpers.clickOperation(locatorsFile.getProperty("selectProduct1"));
 
-		helpers.clickOperation(locatorsFile.getProperty("helpers1"));
+		helpers.clickOperation(locatorsFile.getProperty("addProduct1"));
 
 		helpers.WaitAndSwitchToAlert();
 

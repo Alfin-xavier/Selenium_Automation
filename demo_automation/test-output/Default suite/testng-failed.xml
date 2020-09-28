@@ -5,7 +5,7 @@
     <classes>
       <class name="com.atemcs.demo_automation.Registration">
         <methods>
-          <include name="registration"/>
+          <include name="registration" invocation-numbers="1"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
         </methods>

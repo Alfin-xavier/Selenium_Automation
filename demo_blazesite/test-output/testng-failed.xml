@@ -3,20 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.atmecs.demo_blazesite.ContactUs">
-        <methods>
-          <include name="contactUs"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.atmecs.demo_blazesite.ContactUs -->
-      <class name="com.atmecs.demo_blazesite.Login">
-        <methods>
-          <include name="afterTest"/>
-          <include name="logIn"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.atmecs.demo_blazesite.Login -->
       <class name="com.atmecs.demo_blazesite.AddProduct">
         <methods>
           <include name="addProduct"/>
@@ -26,7 +12,7 @@
       </class> <!-- com.atmecs.demo_blazesite.AddProduct -->
       <class name="com.atmecs.demo_blazesite.SignIn">
         <methods>
-          <include name="signIn"/>
+          <include name="signIn" invocation-numbers="0 2"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
         </methods>

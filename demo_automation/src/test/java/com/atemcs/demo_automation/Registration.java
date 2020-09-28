@@ -19,7 +19,7 @@ public class Registration extends BaseTest
 		
 	}
 	
-	@Test
+	@Test(dataProvider = "readData")
 	public void registration(String firstname, String lastname, String address, String mail, String number, String password, String confirmpass)
 	{
 		RegistrationFormFilling form = new RegistrationFormFilling(driver);
