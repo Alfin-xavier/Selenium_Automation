@@ -2,10 +2,8 @@ package com.atmecs.automating_travelsite.pagehelper;
 
 import java.io.IOException;
 import java.util.Properties;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import com.atmecs.automating_travelsite.basetest.BaseTest;
 import com.atmecs.automating_travelsite.constants.Constants;
 import com.atmecs.automating_travelsite.helpers.Helpers;
 import com.atmecs.automating_travelsite.utilities.PropertyReader;
@@ -25,25 +23,23 @@ public class LoginWindowHandling
 		this.driver = driver;
 	}
 	
-	  public void handlingWindowTest() throws IOException, InterruptedException 
+	  public void handlingWindowTest(String Username, String PassWord) throws IOException, InterruptedException 
 	  { 
 		 helpers = new Helpers(driver);
 		 
 		 locatorsFile = PropertyReader.readProperties(Constants.LOCATORS);
 		 
-		 data = PropertyReader.readProperties(Constants.DATAS);
-		
 		helpers.clickOpertaion(locatorsFile.getProperty("login"));
 
 		helpers.clickOpertaion(locatorsFile.getProperty("gmail"));
 		
 		helpers.switchWindow();
 	  
-		helpers.textData(locatorsFile.getProperty("username"), data.getProperty("name"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("username"))).sendKeys(Username);
 		
 		helpers.clickOpertaion(locatorsFile.getProperty("button1"));
 		
-		helpers.textData(locatorsFile.getProperty("userpassword"), data.getProperty("password"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("username"))).sendKeys(PassWord);
 
 		helpers.clickOpertaion(locatorsFile.getProperty("button2"));
 

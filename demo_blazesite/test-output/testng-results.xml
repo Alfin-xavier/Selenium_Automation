@@ -2,35 +2,30 @@
 <testng-results ignored="0" total="4" passed="0" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-25T15:55:32 IST" name="Suite" finished-at="2020-09-25T15:56:12 IST" duration-ms="39649">
+  <suite started-at="2020-09-28T16:24:04 IST" name="Suite" finished-at="2020-09-28T16:24:20 IST" duration-ms="16205">
     <groups>
     </groups>
-    <test started-at="2020-09-25T15:55:32 IST" name="Test" finished-at="2020-09-25T15:56:12 IST" duration-ms="39649">
+    <test started-at="2020-09-28T16:24:04 IST" name="Test" finished-at="2020-09-28T16:24:20 IST" duration-ms="16205">
       <class name="com.atmecs.demo_blazesite.SignIn">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.atmecs.demo_blazesite.SignIn@18ce0030]" started-at="2020-09-25T15:55:49 IST" name="beforeTest" finished-at="2020-09-25T15:55:57 IST" duration-ms="7444" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="signIn()[pri:0, instance:com.atmecs.demo_blazesite.SignIn@18ce0030]" started-at="2020-09-25T15:55:57 IST" name="signIn" finished-at="2020-09-25T15:55:57 IST" duration-ms="94" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:com.atmecs.demo_blazesite.SignIn@2f7c2f4f]" started-at="2020-09-28T16:24:20 IST" name="signIn" finished-at="2020-09-28T16:24:20 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
+              <![CDATA[
+Cannot inject @Test annotated Method [signIn] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-at com.atmecs.demo_blazesite.helper.Helpers.textbox(Helpers.java:34)
-at com.atmecs.demo_blazesite.pagehelper.SignInTest.signUpTest(SignInTest.java:37)
-at com.atmecs.demo_blazesite.SignIn.signIn(SignIn.java:17)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [signIn] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:437)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:351)
+at org.testng.internal.Parameters.createParameters(Parameters.java:708)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:875)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:788)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -52,21 +47,17 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.atmecs.demo_blazesite.SignIn@18ce0030]" started-at="2020-09-25T15:55:57 IST" name="afterTest" finished-at="2020-09-25T15:55:57 IST" duration-ms="177" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
       </class> <!-- com.atmecs.demo_blazesite.SignIn -->
       <class name="com.atmecs.demo_blazesite.AddProduct">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.atmecs.demo_blazesite.AddProduct@56a6d5a6]" started-at="2020-09-25T15:55:32 IST" name="beforeTest" finished-at="2020-09-25T15:55:44 IST" duration-ms="11538" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.atmecs.demo_blazesite.AddProduct@1b1473ab]" started-at="2020-09-28T16:24:04 IST" name="beforeTest" finished-at="2020-09-28T16:24:15 IST" duration-ms="10785" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="addProduct()[pri:0, instance:com.atmecs.demo_blazesite.AddProduct@56a6d5a6]" started-at="2020-09-25T15:55:44 IST" name="addProduct" finished-at="2020-09-25T15:55:45 IST" duration-ms="1129" status="FAIL">
+        <test-method signature="addProduct()[pri:0, instance:com.atmecs.demo_blazesite.AddProduct@1b1473ab]" started-at="2020-09-28T16:24:15 IST" name="addProduct" finished-at="2020-09-28T16:24:16 IST" duration-ms="1040" status="FAIL">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[Cannot find elements when the XPath is null.]]>
@@ -112,36 +103,31 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProduct -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.atmecs.demo_blazesite.AddProduct@56a6d5a6]" started-at="2020-09-25T15:55:45 IST" name="afterTest" finished-at="2020-09-25T15:55:49 IST" duration-ms="4327" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.atmecs.demo_blazesite.AddProduct@1b1473ab]" started-at="2020-09-28T16:24:16 IST" name="afterTest" finished-at="2020-09-28T16:24:20 IST" duration-ms="4326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.atmecs.demo_blazesite.AddProduct -->
       <class name="com.atmecs.demo_blazesite.ContactUs">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.atmecs.demo_blazesite.ContactUs@4445629]" started-at="2020-09-25T15:55:57 IST" name="beforeTest" finished-at="2020-09-25T15:56:04 IST" duration-ms="6776" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="contactUs()[pri:0, instance:com.atmecs.demo_blazesite.ContactUs@4445629]" started-at="2020-09-25T15:56:04 IST" name="contactUs" finished-at="2020-09-25T15:56:04 IST" duration-ms="136" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method signature="contactUs(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.atmecs.demo_blazesite.ContactUs@6af93788]" started-at="2020-09-28T16:24:20 IST" name="contactUs" finished-at="2020-09-28T16:24:20 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
+              <![CDATA[
+Cannot inject @Test annotated Method [contactUs] with [class java.lang.String, class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-at com.atmecs.demo_blazesite.helper.Helpers.textbox(Helpers.java:34)
-at com.atmecs.demo_blazesite.pagehelper.ContactUsTest.contactUsScript(ContactUsTest.java:37)
-at com.atmecs.demo_blazesite.ContactUs.contactUs(ContactUs.java:17)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [contactUs] with [class java.lang.String, class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:437)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:351)
+at org.testng.internal.Parameters.createParameters(Parameters.java:708)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:875)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:788)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -163,40 +149,31 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactUs -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.atmecs.demo_blazesite.ContactUs@4445629]" started-at="2020-09-25T15:56:04 IST" name="afterTest" finished-at="2020-09-25T15:56:04 IST" duration-ms="274" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
       </class> <!-- com.atmecs.demo_blazesite.ContactUs -->
       <class name="com.atmecs.demo_blazesite.Login">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.atmecs.demo_blazesite.Login@45b9a632]" started-at="2020-09-25T15:56:04 IST" name="beforeTest" finished-at="2020-09-25T15:56:12 IST" duration-ms="7500" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="logIn()[pri:0, instance:com.atmecs.demo_blazesite.Login@45b9a632]" started-at="2020-09-25T15:56:12 IST" name="logIn" finished-at="2020-09-25T15:56:12 IST" duration-ms="82" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method signature="logIn(java.lang.String, java.lang.String)[pri:0, instance:com.atmecs.demo_blazesite.Login@ef9296d]" started-at="2020-09-28T16:24:20 IST" name="logIn" finished-at="2020-09-28T16:24:20 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
+              <![CDATA[
+Cannot inject @Test annotated Method [logIn] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-at com.atmecs.demo_blazesite.helper.Helpers.textbox(Helpers.java:34)
-at com.atmecs.demo_blazesite.pagehelper.LogInTest.logInTest(LogInTest.java:38)
-at com.atmecs.demo_blazesite.Login.logIn(Login.java:17)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [logIn] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:437)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:351)
+at org.testng.internal.Parameters.createParameters(Parameters.java:708)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:875)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:788)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -218,14 +195,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.atmecs.demo_blazesite.Login@45b9a632]" started-at="2020-09-25T15:56:12 IST" name="afterTest" finished-at="2020-09-25T15:56:12 IST" duration-ms="119" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
       </class> <!-- com.atmecs.demo_blazesite.Login -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

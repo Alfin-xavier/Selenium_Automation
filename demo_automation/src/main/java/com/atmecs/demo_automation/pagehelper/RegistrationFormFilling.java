@@ -3,6 +3,7 @@ package com.atmecs.demo_automation.pagehelper;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.atmecs.demo_automation.contants.Constants;
@@ -24,7 +25,7 @@ public WebDriver driver;
 		this.driver = driver;
 	}
 	
-	public void registerationTest() throws IOException 
+	public void registerationTest(String firstname, String lastname, String address, String mail, String number, String password, String confirmpass) throws IOException 
 	{
 		helpers = new Helpers(driver);
 
@@ -32,15 +33,15 @@ public WebDriver driver;
 
 		data = PropertyReader.readProperties(Constants.DATAS);
 		
-		helpers.textData(locatorsFile.getProperty("firstname"), data.getProperty("fname"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("firstname"))).sendKeys(firstname);
 		
-		helpers.textData(locatorsFile.getProperty("lastname"), data.getProperty("lname"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("lastname"))).sendKeys(lastname);
 		
-		helpers.textData(locatorsFile.getProperty("address"), data.getProperty("addressvalue"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("address"))).sendKeys(address);
 		
-		helpers.textData(locatorsFile.getProperty("gmail"), data.getProperty("mail"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("gmail"))).sendKeys(mail);
 		
-		helpers.textData(locatorsFile.getProperty("mob"), data.getProperty("number"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("mob"))).sendKeys(number);
 		
 		helpers.clickingButton(locatorsFile.getProperty("gender"));
 		
@@ -64,9 +65,9 @@ public WebDriver driver;
 		
 		helpers.selectFromDropDown(locatorsFile.getProperty("date"), "11");
 		
-		helpers.textData(locatorsFile.getProperty("password"), data.getProperty("passvalue1"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("password"))).sendKeys(password);
 		
-		helpers.textData(locatorsFile.getProperty("confirmpass"), data.getProperty("passvalue2"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("confirmpass"))).sendKeys(confirmpass);
 		
 		helpers.clickingButton(locatorsFile.getProperty("submit"));
 

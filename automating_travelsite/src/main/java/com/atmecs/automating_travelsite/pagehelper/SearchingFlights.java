@@ -2,8 +2,8 @@ package com.atmecs.automating_travelsite.pagehelper;
 
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import com.atmecs.automating_travelsite.constants.Constants;
 import com.atmecs.automating_travelsite.helpers.Helpers;
 import com.atmecs.automating_travelsite.utilities.PropertyReader;
@@ -18,24 +18,28 @@ public class SearchingFlights
 	
 	Properties locatorsFile;
 	
+	Object[][] readData;
+	
 	public SearchingFlights(WebDriver driver)
 	{
 		this.driver = driver;
 	}
 
-	public void twoWayTripSelectionTest() throws InterruptedException 
+	public void twoWayTripSelectionTest(String Source, String Destination) throws InterruptedException 
 	{
 		helpers = new Helpers(driver);
 
 		locatorsFile = PropertyReader.readProperties(Constants.LOCATORS);
+		
+		//readData = ReadDataFromExcel.readExcelData("Sheet1");
 
-		data = PropertyReader.readProperties(Constants.DATAS);
+		//data = PropertyReader.readProperties(Constants.DATAS);
 
 		helpers.checkbox(locatorsFile.getProperty("roundtrip"));
 
-		helpers.textData(locatorsFile.getProperty("source"), data.getProperty("sourcevalue"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("source"))).sendKeys(Source);
 
-		helpers.textData(locatorsFile.getProperty("destination"), data.getProperty("destinationvalue"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("destination"))).sendKeys(Destination);
 
 		helpers.clickOpertaion(locatorsFile.getProperty("date1"));
 

@@ -3,6 +3,7 @@
   <groupId>com.atmecs</groupId>
   <artifactId>automating_travelsite</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -10,6 +11,13 @@
   </properties>
   
   <dependencies>
+
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi</artifactId>
+		<version>4.1.2</version>
+	</dependency>
+
 
     <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
@@ -23,6 +31,7 @@
     <version>7.3.0</version>
     <scope>test</scope>
 	</dependency>
+	
 </dependencies>
   
 </project>

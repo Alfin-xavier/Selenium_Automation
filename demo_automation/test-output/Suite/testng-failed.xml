@@ -3,13 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.atemcs.demo_automation.HandlingIconWindows">
-        <methods>
-          <include name="handlingIconWindows"/>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.atemcs.demo_automation.HandlingIconWindows -->
       <class name="com.atemcs.demo_automation.Registration">
         <methods>
           <include name="registration"/>

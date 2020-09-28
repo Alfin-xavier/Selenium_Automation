@@ -3,6 +3,7 @@ package com.atmecs.demo_blazesite.pagehelper;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.atmecs.demo_blazesite.constants.Constants;
@@ -24,7 +25,7 @@ public class ContactUsTest
 		this.driver = driver;
 	}
 
-	public void contactUsScript() throws InterruptedException, IOException 
+	public void contactUsScript(String mail, String name, String message) throws InterruptedException, IOException 
 	{
 		helpers = new Helpers(driver);
 
@@ -34,11 +35,11 @@ public class ContactUsTest
 		
 		helpers.clickOperation(locatorsFile.getProperty("contactUs"));
 		
-		helpers.textbox(locatorsFile.getProperty("recipientMail"), datas.getProperty("mailValue"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("recipientMail"))).sendKeys(mail);
 		
-		helpers.textbox(locatorsFile.getProperty("recipientName"), datas.getProperty("nameValue"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("recipientName"))).sendKeys(name);
 		
-		helpers.textbox(locatorsFile.getProperty("message"), datas.getProperty("messageValue"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("message"))).sendKeys(message);
 		
 		helpers.clickOperation(locatorsFile.getProperty("button3"));
 		 

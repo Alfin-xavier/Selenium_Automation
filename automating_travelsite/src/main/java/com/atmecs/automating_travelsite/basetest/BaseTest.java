@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import com.atmecs.automating_travelsite.constants.Constants;
-import com.atmecs.automating_travelsite.helpers.Helpers;
 import com.atmecs.automating_travelsite.utilities.PropertyReader;
 
 public class BaseTest 

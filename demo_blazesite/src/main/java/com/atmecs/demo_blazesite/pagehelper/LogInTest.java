@@ -3,6 +3,7 @@ package com.atmecs.demo_blazesite.pagehelper;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.atmecs.demo_blazesite.constants.Constants;
@@ -24,7 +25,7 @@ public class LogInTest
 		this.driver = driver;
 	}
 
-	public void logInTest() throws InterruptedException, IOException 
+	public void logInTest(String username, String password) throws InterruptedException, IOException 
 
 	{
 		helpers = new Helpers(driver);
@@ -35,9 +36,9 @@ public class LogInTest
 
 		helpers.clickOperation(locatorsFile.getProperty("login"));
 
-		helpers.textbox(locatorsFile.getProperty("lusername"), datas.getProperty("lname"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("lusername"))).sendKeys(username);
 
-		helpers.textbox(locatorsFile.getProperty("lpassword"), datas.getProperty("lpass"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("lpassword"))).sendKeys(password);
 
 		helpers.clickOperation(locatorsFile.getProperty("button2"));
 

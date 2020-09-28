@@ -4,6 +4,8 @@ package com.atmecs.handling_frames.pagehelper;
 
 import java.io.IOException;
 import java.util.Properties;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.atmecs.handling_frames.constant.Constants;
@@ -25,7 +27,7 @@ public class HandlingFramesUsingJS
 		this.driver = driver;
 	}
 
-	public void handlingFrameAndClickChatIconTest() throws InterruptedException, IOException
+	public void handlingFrameAndClickChatIconTest(String name, String number, String mail) throws InterruptedException, IOException
 	{
 		helpers = new HelperClass(driver);
 
@@ -37,11 +39,11 @@ public class HandlingFramesUsingJS
 		
 		helpers.jsMethods(locatorsFile.getProperty("chaticon"));
 		
-		helpers.textDatas(locatorsFile.getProperty("username"), datas.getProperty("name"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("username"))).sendKeys(name);
 
-		helpers.textDatas(locatorsFile.getProperty("mob"), datas.getProperty("number"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("mob"))).sendKeys(number);
 
-		helpers.textDatas(locatorsFile.getProperty("usermail"), datas.getProperty("gmail"));
+		driver.findElement(By.xpath(locatorsFile.getProperty("usermail"))).sendKeys(mail);
 		
 		helpers.clickOperation(locatorsFile.getProperty("checkbox"));
 

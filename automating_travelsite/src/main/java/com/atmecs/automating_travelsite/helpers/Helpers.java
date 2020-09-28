@@ -19,10 +19,9 @@ public class Helpers
 		this.driver = driver;
 	}
 
-	public void textData(String xpath, String value)
+	public void textData(String xpath)
 	{
-		WebElement susername = driver.findElement(By.xpath(xpath));
-		susername.sendKeys(value);
+		driver.findElement(By.xpath(xpath)).sendKeys("");
 	}
 
 	public void switchWindow()

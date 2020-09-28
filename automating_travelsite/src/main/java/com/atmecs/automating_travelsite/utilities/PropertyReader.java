@@ -5,10 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.WebDriver;
-
-import com.atmecs.automating_travelsite.constants.Constants;
-
 public class PropertyReader 
 {
 	public static Properties properties;
@@ -19,9 +15,11 @@ public class PropertyReader
 
 		try {
 		properties.load(new FileInputStream(filePath));
-		} catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e)
+		{
 		System.out.println("File not found in the given location" + e.getMessage());
-		} catch (IOException e) {
+		} catch (IOException e)
+		{
 		System.out.println("Input Output Exception " + e.getMessage());
 		}
 

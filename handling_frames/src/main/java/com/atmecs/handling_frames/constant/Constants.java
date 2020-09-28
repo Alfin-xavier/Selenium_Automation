@@ -7,4 +7,5 @@ public class Constants
 	public static final String DATAS = "./src/main/resources/datas/testdatas.properties";
 	public static final String CONFIG = "./src/main/resources/datas/config.properties";
 	public static final String LOCATORS = "./src/main/resources/locators/locators.properties";
+	public static final String EXCEL_DATAS = "./src/main/resources/datas/HandlingFrames.xlsx";
 }
